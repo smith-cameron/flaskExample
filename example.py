@@ -45,10 +45,13 @@ def read_dict_values(input_dict):
 
 # read_dict_values(this_user)
 
+# Pretend code added here
 # > Update
 def update_dict(this_user):
   # var_name = value
   this_user['first_name'] = "John"
+
+
 
   this_user.update({
     "first_name" : "Jane", 
@@ -60,6 +63,7 @@ def update_dict(this_user):
   })
   # print(this_user)
   return this_user
+
 
 new_user = update_dict(this_user)
 
@@ -77,6 +81,7 @@ def by_key(new_user):
     print(iterator)
 # by_key(new_user)
 
+
 # > By Value Via Key
 def value_by_key(new_user):
   # dictionary_name['key']
@@ -84,6 +89,7 @@ def value_by_key(new_user):
     print(f"key: {iterator}")
     print(f"value: {new_user[iterator]}")
 # value_by_key(new_user)
+
 
 # > .keys()
 def keys_built_in(new_user):
@@ -121,11 +127,13 @@ def create_user(f_name, l_name, age, email, has_kids = False):
   all_users.append(user)
   return user
 
+
 user_timmy = create_user("Timmy", "Jimmy-Jam", 33, "tjj@email.com")
 create_user("Ben", "Jammin", 43, "bj@email.com")
 create_user("Clint", "Eastwood", 399, "ce@email.com", True)
 create_user("DB", "Cooper", 90, "db@email.com")
 create_user("Kaya", "Seawalker", 26, "ks@email.com")
+
 
 # ? Add each dictionary to a list
 # ? Create a function that searches for a user and update children
@@ -142,8 +150,10 @@ def find_one(all_users, user_name, kid_to_add):
       user['children'].append(kid_to_add)
       user['has_kids'] = True
 
+
 find_one(all_users,"Timmy", this_user)
 new_user['children'].append(user_timmy)
+
 
 find_one(all_users,"DB", "Zebulon")
 find_one(all_users,"Clint", [this_user, "Sam"])
